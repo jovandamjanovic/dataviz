@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>D3js dynamic graphing example</title>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<style>
+			html {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				height: 95%;
+				align-content: stretch;
+			}
+			section {
+				border: 5px solid lightblue;
+				border-radius: 1%;
+				margin: 5px;
+				padding: 5px;
+			}
+			#options {
+				flex: 1;
+			}
+			.flexHorizontal {
+				display: flex;
+				flex-direction: row;
+				margin: 0px;
+				padding: 0px;
+				border: none;
+				flex: 9;
+			}
+			#fields {
+				flex: 1;
+			}
+			#mainViz {
+				flex: 4;
+				text-align: center;
+			}
+			#graph {
+				margin: auto;
+			}
+			#tableData {
+				display:inline-block;
+  				text-align:center;
+			}
+			table {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<section id="options">
+			Select Table: <select id="tableSelector">
+			</select>
+			<br/> 
+			Select View: <a href = "#">summary</a>  <a href = "#">charts</a>  <a href = "#">statistics</a>
+		</section>
+		<section class="flexHorizontal">
+			<section id="fields">
+				<h3>Text Fields</h3>
+				<div id="text"></div>
+				<h3>Numeric Fields</h3>
+				<div id="numeric"></div>
+				<h3>Date Fields</h3>
+				<div id="date"></div>
+			</section>
+			<section id="mainViz">
+				<svg id="graph"></svg>
+				<div id="tableData"></div>
+			</section>
+		</section>
+	</body>
+	<script src="d3jse.min.js"></script>
+</html>
